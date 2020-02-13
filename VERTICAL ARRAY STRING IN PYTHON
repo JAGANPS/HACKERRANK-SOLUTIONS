@@ -1,0 +1,39 @@
+THE FOLLOWING PROGRAM IS TO PRINT THE TAKEN ANY STRINGS INTO VERTICAL FORMAT
+
+the array elements are: ['Amazon', 'Google', 'IBM', 'MIcRosoft']
+A G I M 
+m o B I 
+a o M c 
+z g   R 
+o l   o 
+n e   s 
+      o 
+      f 
+      t 
+:::::::::::::::::::::::::SOLUTION::::::::::::::::::::::::::::::
+k=str(input("enter the strings"))
+s=k.split()
+maxlen=max([len(w) for w in s])
+print("the array elements are:",s)
+for i in range(maxlen):
+    line=""
+    for w in s:
+        try:
+            line+=w[i]
+        except IndexError:
+            line+=" "
+        line+=" "
+    print(line)
+
+::::::::::::::::::::::OUTPUT:::::::::::::::::::::::::::::::::::::::::::::::
+enter the stringsAmazon Google IBM MIcRosoft
+the array elements are: ['Amazon', 'Google', 'IBM', 'MIcRosoft']
+A G I M 
+m o B I 
+a o M c 
+z g   R 
+o l   o 
+n e   s 
+      o 
+      f 
+      t 
