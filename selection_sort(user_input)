@@ -1,0 +1,24 @@
+  A SELECTION SORT WITH USER INPUTS WITH SPACES SEPARTARED BETWEEN THE NUMBERS
+ ::::::::::::::::::::::::::::::::::::::::::EXPECTED OUTPUT::::::::::::::::::::::::::::::::: 
+enter the list values:34,67,32,897,43,90,2,0,321,1,78
+Sorted[0, 1, 2, 32, 34, 43, 67, 78, 90, 321, 897]
+
+
+
+:::::::::::::::::::::::::::::::::::::::SOLUTION:::::::::::::::::::::::::::::::::::::::::::::::
+def selection(list1):
+    for i in range(0,len(list1)-1):
+        min_val=i
+        for j in range(i+1,len(list1)):
+            if list1[j]<list1[min_val]:
+                min_val=j
+        list1[i],list1[min_val]=list1[min_val],list1[i]
+list1=input("Enter the array elements with the space:").split()
+list1=[int(x) for x in list1]
+selection(list1)
+print("Sorted:",end="")
+print(list1)
+
+:::::::::::::::::::::::::::::::::::::::::OUTPUT::::::::::::::::::::::::::::::::::::::::::::::::::
+Enter the array elements with the space344 23 21 112 34 1122 11 111 45 5 0 76
+Sorted:[0, 5, 11, 21, 23, 34, 45, 76, 111, 112, 344, 1122]
