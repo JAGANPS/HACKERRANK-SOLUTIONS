@@ -1,0 +1,22 @@
+THE NUMBER OF TIMES THE PATTERN REPEATED WITH SPEICFIC ALPHABET 
+here we have taken "a" as the alphabet to be searched or repeated times
+
+:::::::::::::::::::::::::::::::::::::EXPECTED OUTPUT::::::::::::::::::::::::::::::::::::::::::::
+Sample Input 0
+aba
+10
+Sample Output 0
+7
+Explanation 0 
+The first  letters of the infinite string are abaabaabaa. Because there are  a's, we print  on a new line.
+::::::::::::::::::::::::::::::Solution:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+def t():
+	s=input().strip()
+	n=int(input().strip())
+	return(s.count("a")*(n//len(s))+s[:n%len(s)].count("a"))
+:::::::::::::::::::::::::::::::output::::::::::::::::::::::::::::::::::::::::::::::
+Input 
+aba
+10
+Output 
+7
