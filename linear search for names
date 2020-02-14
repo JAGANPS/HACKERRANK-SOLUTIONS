@@ -1,0 +1,26 @@
+:::::::::::::::::::::::::::::::::::::CODE::::::::::::::::::::::::::::::::::::::::::::::::::
+def linear(list1,k):
+  for i in range(len(list1)):
+    if list1[i]==k:
+      return i
+  return -1
+
+
+
+
+list1=str(input("enter the list of array elements::::")).split()
+list1=[(x) for x in list1]
+k=str(input("enter the key to be searched==="))
+index=linear(list1,k)
+if index<0:
+  print("{} the name is not found".format(k))
+else:
+  print("{}the name is found at the position{}".format(k,index))
+::::::::::::::::::::::::::::::::::::::::::::::::Output::::;;;:::::::::::::::::
+enter the list of array elements::::Jio airtel vodafone Aircel tatadocomo bsnl
+enter the key to be searched===airtel
+airtelthe name is found at the position1
+--------------------------------------------------------------------------------
+enter the list of array elements::::Jio airtel vodafone Aircel tatadocomo bsnl
+enter the key to be searched===hutch
+hutch the name is not found
