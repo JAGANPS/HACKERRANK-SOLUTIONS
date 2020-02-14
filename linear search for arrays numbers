@@ -1,0 +1,29 @@
+:::::::::::::::::::::::::::::::::Linear search::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+the input is taken from the user so the key must be searched from given list of array
+
+def linear(list1,k):
+  for i in range(len(list1)):
+    if list1[i]==k:
+      return i
+  return -1
+
+
+
+
+list1=input("enter the list of array elements").split()
+list1=[int(x) for x in list1]
+k=int(input("enter the key to be searched"))
+index=linear(list1,k)
+if index<0:
+  print("NO")
+else:
+  print("YES")
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::Output::::::::::::::::::::::::::::::::::::::
+enter the list of array elements3 78 45 34 22 1 56 90 344
+enter the key to be searched2
+NO
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+enter the list of array elements3 78 45 34 22 1 56 90 344
+enter the key to be searched1
+YES
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
