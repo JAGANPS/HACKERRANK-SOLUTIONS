@@ -1,0 +1,30 @@
+::::::::::::::::::::::::::::Binary search without recurssion for integers:::::::::::::::::::::::::::::
+def binary(list1,key):
+  s=0
+  e=len(list1)
+  while(s<e):
+    mid=(s+e)//2
+    if list1[mid]>key:
+      e=mid
+    elif list1[mid]<key:
+      s=mid+1
+    else:
+      return mid
+  return -1
+
+
+
+
+
+list1=input("enter the list of array elements").split()
+list1=[int(x) for x in list1]
+key=int(input("enter the key to be searched:"))
+index=binary(list1,key)
+if index<0:
+  print("Not found")
+else:
+  print("found")
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::Output:::::::::::::::::::::::::::::::::::::::::::
+enter the list of array elements9 3 23 67 89 45 0 12
+enter the key to be searched:11
+Not found
